@@ -5,10 +5,17 @@ const INITAL_STATE: ICartState = {
   items: [],
 };
 
-const cart: Reducer<ICartState> = (state, action) => {
-  console.log(state, action);
+const cart: Reducer<ICartState> = (state = INITAL_STATE, action) => {
+  switch (action.type) {
+    case "ADD_PRODUCT_TO_CART": {
+      const { product } = action.payload;
 
-  return INITAL_STATE;
+      return { ...state, items: [...state.items, { product, quantity: 1 }] };
+    }
+    default: {
+      return state;
+    }
+  }
 };
 
 export default cart;
