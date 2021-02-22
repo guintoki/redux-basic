@@ -14,9 +14,12 @@ const Catalog: React.FC = () => {
     });
   }, []);
 
-  const handleAddProductToCart = useCallback((product: IProduct) => {
-    dispatch(addProductToCard(product));
-  }, []);
+  const handleAddProductToCart = useCallback(
+    (product: IProduct) => {
+      dispatch(addProductToCard(product));
+    },
+    [dispatch]
+  );
 
   return (
     <main>
