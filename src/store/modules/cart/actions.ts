@@ -1,6 +1,6 @@
 import { IProduct } from "./types";
 
-export function addProductToCard(product: IProduct) {
+export function addProductToCart(product: IProduct) {
   return {
     type: "ADD_PRODUCT_TO_CART",
     payload: {
