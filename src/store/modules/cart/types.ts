@@ -1,3 +1,5 @@
+export enum
+
 export interface IProduct {
   id: number;
   title: string;
@@ -11,4 +13,5 @@ export interface ICartItem {
 
 export interface ICartState {
   items: ICartItem[];
+  failedStockCheck: number[];
 }
